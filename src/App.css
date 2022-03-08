@@ -1,38 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap');
+
+#root {
+   cursor: default;
+   font-family: 'Montserrat', sans-serif;
+   font-weight: 300;
+   --grey: #787b80;
+}
+
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  cursor: default;
 }
 
 .App-header {
-  background-color: #282c34;
+   background: url('images/stars.gif');
+   font-family: 'Montserrat', sans-serif;
+}
+
+.App-header {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.header-logo {
+  height: 40vmin;
+  pointer-events: none;
 }
 
-@keyframes App-logo-spin {
+@media (prefers-reduced-motion: no-preference) {
+  .header-logo {
+    animation: header-logo-spin infinite 20s linear;
+  }
+}
+
+@keyframes header-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
   }
+}
+
+.App-header h1 {
+   color: white;
+   font-size: 3em;
+   font-weight: 300;
+}
+
+/*Past launches component*/
+.hero {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+}
+
+.hero-border {
+   border-bottom: 5px solid #000000;
+   width: 5vw;
+   padding-top: 2vh;
+}
+
+.hero h2 {
+   padding-top: 10vh;
+   font-weight: 700;
+}
+
+.hero-paragraph {
+   padding-top: 3vh;
+   font-weight: bold;
+}
+
+.data-list {
+   list-style-type: none;
+   margin: 3vh 0 10vh;
+}
+
+.data-list-item {
+   padding-top: 1vh;
+   font-size: 1.1em;
+}
+
+.data-list-item a {
+   text-decoration: none;
+   color: black;
+}
+
+.data-list-item a:hover {
+   color: var(--grey);
+}
+
+/*Launch details component*/
+.launch-details {
+   margin: 10vh 10vw;
+}
+
+#launch-details-table {
+   margin: 10vh 0vw;
+   border: none;
+}
+
+.mission-title {
+   font-size: 2em;
+   height: 10vh;
+}
+
+#launch-details-table th {
+   width: 10vw;
+   text-align: left;
+   vertical-align: top;
+}
+
+#launch-details-table td {
+   width: 60vw;
+   padding-left: 3vw;
+   text-align: left;
+   vertical-align: top;
+}
+
+/*Footer component*/
+footer {
+   background-color: black;
+   width: 100%;
+   height: 8vh;
+   color: white;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+   padding-top: 2vh;
 }

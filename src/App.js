@@ -1,25 +1,32 @@
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
+import Header from "./components/Header";
+import PastLaunches from "./components/PastLaunches";
+import LaunchDetails from "./components/LaunchDetails";
+import Footer from "./components/Footer";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route
+} from "react-router-dom";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+class App extends Component {
+  render(){
+    return (
+      <Router>
+        <React.Fragment>
+          <Header />
+          <Routes>
+            <Route exact path="/" element={<PastLaunches />}>
+            </Route>
+            <Route path="/details/:id" element={<LaunchDetails />}>
+            </Route>
+          </Routes>
+          <Footer />
+        </React.Fragment>
+      </Router>
+    );
+   }
+  }
 
 export default App;
